@@ -4,7 +4,9 @@ version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "depth-anything-v2",
+]
 
 [project.scripts]
 ldm-pre = "ldm_pre:main"
@@ -12,3 +14,11 @@ ldm-pre = "ldm_pre:main"
 [build-system]
 requires = ["uv_build>=0.9.26,<0.10.0"]
 build-backend = "uv_build"
+
+[tool.uv.workspace]
+members = [
+    "third_party/depth-anything-v2",
+]
+
+[tool.uv.sources]
+depth-anything-v2 = { workspace = true, editable = true }
