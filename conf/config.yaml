@@ -1,0 +1,3 @@
+defaults:
+  - job: ???
+  - _self_

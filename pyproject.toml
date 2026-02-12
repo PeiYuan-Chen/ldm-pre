@@ -6,10 +6,16 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "depth-anything-v2",
+    "fsspec>=2026.2.0",
+    "hydra-core>=1.3.2",
+    "pillow>=12.1.1",
+    "ray[data]>=2.53.0",
+    "torch>=2.10.0",
+    "torchvision>=0.25.0",
 ]
 
 [project.scripts]
-ldm-pre = "ldm_pre:main"
+ldm-pre = "ldm_pre.main:main"
 
 [build-system]
 requires = ["uv_build>=0.9.26,<0.10.0"]
