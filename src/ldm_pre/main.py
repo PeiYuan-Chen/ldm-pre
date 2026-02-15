@@ -1,10 +1,15 @@
+import ray
 import hydra
 from hydra.utils import instantiate
-from omegaconf import DictConfig
+
+from ldm_pre.config import register_configs, MainConfig
+
+register_configs()
 
 
-@hydra.main(config_path="../../conf", config_name="config")
-def main(cfg: DictConfig) -> None:
+@hydra.main(version_base=None, config_path=None, config_name="config")
+def main(cfg: MainConfig) -> None:
+    ray.init()
     instantiate(cfg.job)
 
 

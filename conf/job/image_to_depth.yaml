@@ -1,5 +1,0 @@
-_target_: ldm_pre.jobs.image_to_depth.run
-input_uri: ???
-output_uri: ???
-ckpt_path: ???
-root_uri: ???

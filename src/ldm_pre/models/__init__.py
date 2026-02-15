@@ -1,3 +1,3 @@
-from .depth_anything_v2_model import DepthAnythingV2Model
+from .depth_anything import DepthAnythingV2Model
 
 __all__ = ["DepthAnythingV2Model"]
