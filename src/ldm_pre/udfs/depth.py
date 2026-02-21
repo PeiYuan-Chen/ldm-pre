@@ -1,8 +1,6 @@
-import io
 from typing import Literal, Any
 
 import torch
-from PIL import Image
 
 from ldm_pre.models import DepthAnythingV2Model
 from ldm_pre.schema import Cols

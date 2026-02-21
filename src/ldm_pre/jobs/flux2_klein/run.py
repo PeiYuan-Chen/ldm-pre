@@ -58,8 +58,6 @@ def run(cfg: Config):
                 [
                     cfg.cols.hash,
                     cfg.cols.image_bytes,
-                    cfg.cols.target_height,
-                    cfg.cols.target_width,
                     *cfg.cols.captions,
                 ]
             )

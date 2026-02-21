@@ -20,7 +20,9 @@ class LatentEncoder(ABC):
         res = {self.cols.hash: batch[self.cols.hash]}
 
         with torch.no_grad():
-            res[self.cols.image_latents] = self.encode_images(batch[self.cols.image])
+            res[self.cols.image_latents] = tensor_to_numpy(
+                self.encode_images(batch[self.cols.image])
+            )
             if self.cols.condition_image in batch:
                 res[self.cols.condition_image_latents] = tensor_to_numpy(
                     self.encode_images(batch[self.cols.condition_image])
